@@ -39,35 +39,6 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Mono.TextTemplating">
-      <HintPath>..\packages\Mono.TextTemplating.1.0.0\lib\Mono.TextTemplating.dll</HintPath>
-    </Reference>
-    <Reference Include="Nustache.Core">
-      <HintPath>..\packages\Nustache.1.13.8.22\lib\net20\Nustache.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="Rosalia.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Rosalia.Core.2.6.30\lib\Rosalia.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="Rosalia.FileSystem, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Rosalia.Core.2.6.30\lib\Rosalia.FileSystem.dll</HintPath>
-    </Reference>
-    <Reference Include="Rosalia.TaskLib.AssemblyInfo">
-      <HintPath>..\packages\Rosalia.TaskLib.AssemblyInfo.2.6.30\lib\Rosalia.TaskLib.AssemblyInfo.dll</HintPath>
-    </Reference>
-    <Reference Include="Rosalia.TaskLib.MsBuild, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Rosalia.TaskLib.MsBuild.2.6.30\lib\Rosalia.TaskLib.MsBuild.dll</HintPath>
-    </Reference>
-    <Reference Include="Rosalia.TaskLib.NuGet, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Rosalia.TaskLib.NuGet.2.6.30\lib\Rosalia.TaskLib.NuGet.dll</HintPath>
-    </Reference>
-    <Reference Include="Rosalia.TaskLib.Standard, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Rosalia.Core.2.6.30\lib\Rosalia.TaskLib.Standard.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -92,9 +63,32 @@
     <None Include="Assets\Simple\Web.config.transform">
       <SubType>Designer</SubType>
     </None>
-    <None Include="packages.config">
-      <SubType>Designer</SubType>
-    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="ILRepack">
+      <Version>2.0.10</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.TypeScript.Compiler">
+      <Version>1.5.0</Version>
+    </PackageReference>
+    <PackageReference Include="Mono.TextTemplating">
+      <Version>1.0.0</Version>
+    </PackageReference>
+    <PackageReference Include="Mono.TextTransform">
+      <Version>1.0.0</Version>
+    </PackageReference>
+    <PackageReference Include="Rosalia">
+      <Version>2.6.30</Version>
+    </PackageReference>
+    <PackageReference Include="Rosalia.TaskLib.AssemblyInfo">
+      <Version>2.6.30</Version>
+    </PackageReference>
+    <PackageReference Include="Rosalia.TaskLib.MsBuild">
+      <Version>2.6.30</Version>
+    </PackageReference>
+    <PackageReference Include="Rosalia.TaskLib.NuGet">
+      <Version>2.6.30</Version>
+    </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
